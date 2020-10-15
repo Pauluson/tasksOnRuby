@@ -14,6 +14,6 @@ if (d < 0)
 	print "D = #{d} , no solutions "
 elsif (d == 0)
 	print "x = #{-b/(2*a)}"
-elsif ( d > 0)
+else ( d > 0)
 	print"x1 = #{(-b-Math.sqrt(d))/(2*a)}, x2 = #{(-b+Math.sqrt(d))/(2*a)}"
 end

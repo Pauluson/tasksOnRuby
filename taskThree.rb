@@ -22,8 +22,6 @@ elsif (c*c==a*a+b*b)
   print"Your triangle rectangular"
 
 else	
-
-	print"Your triangle versatile"
-
+  print"Your triangle versatile"
 end
 
