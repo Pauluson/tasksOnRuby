@@ -1,10 +1,10 @@
-letters = *('a'..'z')
-volwes = ["a","e","o","i","u"]
-res={}
-letters.each do |letter|
-	if volwes.include?(letter)
-		res[letter]=letters.index(letter)+1
-		end
-		end
-		print res
+# frozen_string_literal: true
 
+# Заполнить хеш гласными буквами, где значением будет являтся порядковый номер буквы в алфавите (a - 1).
+letters = *('a'..'z')
+volwes = %w[a e o i u]
+res = {}
+letters.each_with_index do |letter, index|
+  res[letter] = index + 1 if volwes.include?(letter)
+end
+print res

@@ -1,9 +1,8 @@
-#Заполнить массив числами от 10 до 100 с шагом 5
+# frozen_string_literal: true
+
+# Заполнить массив числами от 10 до 100 с шагом 5
 array = []
-i = 10
-until i==100
-	array = array + [i]
-	i = i +5
-end
+
+(10..100).step(5) { |x| array << x }
 
 print array
