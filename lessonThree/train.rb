@@ -20,6 +20,7 @@ class Train
   end
 
   def stop
+    
     @speed = 0
   end
 
