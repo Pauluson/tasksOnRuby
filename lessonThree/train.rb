@@ -45,7 +45,7 @@ class Train
   def route=(route)
     @route = route
     @current_station = route.stations.first
-    # current_station.get_train(number)
+    @current_station.get_train(self)
   end
 
   def next_station
@@ -57,10 +57,14 @@ class Train
   end
 
   def move_next_station
+    @current_station.send_train(self)
     @current_station = route.stations[route.stations.index(@current_station) + 1]
+    @current_station.send_train(self)
   end
 
   def move_previous_station
+    @current_station.get_train(self)
     @current_station = route.stations[route.stations.index(@current_station) - 1]
+    @current_station.send_train(self)
   end
 end

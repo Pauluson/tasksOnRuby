@@ -19,35 +19,56 @@ routeOne.add_station(stationThree)
 routeOne.get_all_stations
 
 trainOne.route = routeOne
+# trainTwo.route = routeOne
 
-stationOne.get_train(trainOne)
-
-puts "Train #{trainOne.number} on station #{trainOne.current_station.name}"
-
-puts "Next station:#{trainOne.next_station.name}"
-
-trainOne.raise_speed(120)
-
-stationOne.send_train(trainOne)
-
-sleep 1.5
+# stationTwo.get_train(trainOne)
 
 trainOne.move_next_station
 
-trainOne.stop
-
-puts "Train #{trainOne.number} arrived on station #{trainOne.current_station.name}"
-
-stationThree.get_train(trainOne)
-
-trainOne.add_carriage
-
-stationThree.send_train(trainOne)
-
-puts "Next station:#{trainOne.next_station.name}"
-
-sleep 1.5
-
 trainOne.move_next_station
 
-puts "Train #{trainOne.number} arrived on station #{trainOne.current_station.name}"
+# p trainOne
+
+# stationOne.get_train(trainOne)
+
+# p trainOne
+
+p stationOne
+
+p stationThree
+
+p stationTwo
+
+# stationOne.get_train(trainOne)
+#
+# puts "Train #{trainOne.number} on station #{trainOne.current_station.name}"
+#
+# puts "Next station:#{trainOne.next_station.name}"
+#
+# trainOne.raise_speed(120)
+#
+# stationOne.send_train(trainOne)
+#
+# p stationOne
+#
+# sleep 1.5
+#
+# trainOne.move_next_station
+#
+# trainOne.stop
+#
+# puts "Train #{trainOne.number} arrived on station #{trainOne.current_station.name}"
+#
+# stationThree.get_train(trainOne)
+#
+# trainOne.add_carriage
+#
+# stationThree.send_train(trainOne)
+#
+# puts "Next station:#{trainOne.next_station.name}"
+#
+# sleep 1.5
+#
+# trainOne.move_next_station
+#
+# puts "Train #{trainOne.number} arrived on station #{trainOne.current_station.name}"

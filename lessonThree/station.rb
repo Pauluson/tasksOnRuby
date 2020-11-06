@@ -12,8 +12,8 @@ class Station
     trains << train
   end
 
-  def send_train(_train)
-    trains.delete(trains)
+  def send_train(train)
+    trains.delete(train)
   end
 
   def train_by_type(type)
