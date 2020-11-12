@@ -3,17 +3,16 @@
 require './station.rb'
 
 class Train
-  attr_reader :number
+  attr_reader :number_of_train
   attr_reader :type
   attr_reader :route
   attr_accessor :current_station
   attr_accessor :speed
-  attr_accessor :count
+  attr_accessor :carriages
 
-  def initialize(number, type, count)
-    @number = number
-    @type = type
-    @count = count
+  def initialize(number_of_train)
+    @carriages = []
+    @number_of_train = number_of_train
     @speed = 0
   end
 
@@ -24,22 +23,6 @@ class Train
 
   def stop
     @speed = 0
-  end
-
-  def add_carriage
-    if speed.zero?
-      @count += 1
-    else
-      puts 'Stop before add carriage'
-    end
-  end
-
-  def delete_carriage
-    if speed.zero?
-      @count -= 1
-    else
-      puts 'Stop before delete carriage'
-    end
   end
 
   def route=(route)

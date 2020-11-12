@@ -21,10 +21,9 @@ class Station
       puts train.number if train.type == type
     end
   end
-
   def all_trains
     trains.each do |train|
-      puts train.number
+      puts train.number_of_train
     end
   end
 end
