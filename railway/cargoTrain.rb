@@ -8,16 +8,15 @@ class CargoTrain < Train
     @type = 'Cargo'
     super
   end
-
-  def add_carriage(carriage)
-    if carriage.type_of_carriage == 'Cargo'
-      carriages << carriage
-    else
-      puts 'Wrong type of carriage'
-    end
-  end
-
-  def delete_carriage(carriage)
-    carriages.delete(carriage)
-  end
+  #   def add_carriage(carriage)
+  #     if carriage.type_of_carriage == 'Cargo'
+  #       carriages << carriage
+  #     else
+  #       puts 'Wrong type of carriage'
+  #     end
+  #   end
+  #
+  #   def delete_carriage(carriage)
+  #     carriages.delete(carriage)
+  #   end
 end

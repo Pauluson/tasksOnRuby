@@ -25,6 +25,14 @@ class Train
     @speed = 0
   end
 
+  def add_carriage(carriage)
+    carriages << carriage
+  end
+
+  def delete_carriage(carriage)
+    carriages.delete(carriage)
+  end
+
   def route=(route)
     @route = route
     @current_station = route.stations.first
