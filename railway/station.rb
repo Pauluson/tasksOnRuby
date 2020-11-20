@@ -24,7 +24,7 @@ class Station
 
   def all_trains
     trains.each do |train|
-      puts train.number_of_train
+      return train.number_of_train
     end
   end
 end

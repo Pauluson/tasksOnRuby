@@ -18,7 +18,7 @@ class Route
 
   def get_all_stations
     stations.each do |station|
-      puts station.name
+      print station.name
     end
   end
 end
