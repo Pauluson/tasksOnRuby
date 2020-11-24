@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require './carriage.rb'
 
 class PassengerCarriage < Carriage
   def initialize

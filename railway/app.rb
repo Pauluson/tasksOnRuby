@@ -10,7 +10,21 @@ require './cargoCarriage.rb'
 require './passengerCarriage.rb'
 require './carriage'
 
-class Menu
+
+vagon  = CargoCarriage.new
+vagon.name_of("hello")
+vagon.get_name
+
+trainOne = Train.new(771)
+trainTwo = Train.new(123)
+p Train.find(771)
+p Train.instances
+stationOne = Station.new("Grondo")
+stationTwo = Station.new("Gomel")
+
+Station.all
+
+=begin class Menu
   attr_accessor :stations
   attr_accessor :routes
   attr_accessor :trains
@@ -180,3 +194,4 @@ loop do
   end
   break if choice.zero?
 end
+=end
