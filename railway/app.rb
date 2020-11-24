@@ -12,6 +12,20 @@ require './carriage'
 
 vagon = CargoCarriage.new
 vagon.name_of('hello')
+
+# vagon.get_name
+# p vagon
+
+trainOne = Train.new(771)
+trainTwo = Train.new(123)
+trainOne.name_of('sdgsg')
+p Train.find(123)
+# p Train.instances
+stationOne = Station.new('Grondo')
+stationTwo = Station.new('Gomel')
+
+# Station.all
+=======
 vagon.get_name
 
 trainOne = Train.new(771)
@@ -22,6 +36,7 @@ stationOne = Station.new('Grondo')
 stationTwo = Station.new('Gomel')
 
 Station.all
+
 
 # class Menu
 #   attr_accessor :stations

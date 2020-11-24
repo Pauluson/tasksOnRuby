@@ -2,6 +2,7 @@
 
 require './station.rb'
 require './counter.rb'
+require './company.rb'
 require 'pry'
 class Train
   attr_reader :number_of_train
@@ -11,6 +12,7 @@ class Train
   attr_accessor :speed
   attr_accessor :carriages
   include InstanceCounter
+  include Company
   def initialize(number_of_train)
     @carriages = []
     @number_of_train = number_of_train
@@ -62,10 +64,8 @@ class Train
   end
 
   def self.find(number)
-    a = false
     ObjectSpace.each_object(Train) do |b|
-      b.number_of_train == number ? a = b : a
+      p b if b.number_of_train == number
     end
-    p a
   end
 end
