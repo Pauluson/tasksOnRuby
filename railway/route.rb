@@ -18,7 +18,11 @@ class Route
 
   def get_all_stations
     stations.each do |station|
-      puts station.name
+      print station.name
     end
+  end
+
+  def route_name
+    "#{@stations.first.name}_#{@stations.last.name}"
   end
 end
