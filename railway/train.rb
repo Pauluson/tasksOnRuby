@@ -15,8 +15,9 @@ class Train
     @carriages = []
     @number_of_train = number_of_train
     @speed = 0
-    self.register_instance
+    register_instance
   end
+
   def raise_speed(speed)
     @speed += @speed
     puts "Train speed: #{speed}"
@@ -59,6 +60,7 @@ class Train
     @current_station = route.stations[route.stations.index(@current_station) - 1]
     @current_station.get_train(self)
   end
+
   def self.find(number)
     a = false
     ObjectSpace.each_object(Train) do |b|

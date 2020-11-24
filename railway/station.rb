@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Station
   attr_reader :name
   attr_reader :trains
@@ -6,6 +7,7 @@ class Station
     @name = name
     @trains = []
   end
+
   def get_train(train)
     trains << train
   end
@@ -25,7 +27,8 @@ class Station
       return train.number_of_train
     end
   end
+
   def self.all
-  p ObjectSpace.each_object(Station).to_a
+    p ObjectSpace.each_object(Station).to_a
   end
 end
